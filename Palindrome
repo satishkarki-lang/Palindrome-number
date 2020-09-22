@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+
+public static void main(String[] args) {
+
+int num;
+int reverseNum = 0;
+int remainder; 
+int orginalNum;
+Scanner input = new Scanner(System.in);
+  
+ System.out.println("Enter any number ");
+num=input.nextInt();
+  
+orginalNum = num;
+
+while( num != 0 )
+{
+remainder = num % 10;
+reverseNum = reverseNum * 10 + remainder;
+num /= 10;
+}
+
+if (orginalNum == reverseNum)
+System.out.println(orginalNum + " is a palindrome number.");
+else
+System.out.println(orginalNum + " is not a palindrome number.");
+}
+}
